@@ -1,0 +1,48 @@
+Panduan Github
+https://rogerdudler.github.io/git-guide/index.id.html
+
+
+melihat pohon ASCII art seluruh percabangan disertai nama dan penandanya
+alias graph="git log --all --decorate --oneline --graph"
+git log --all --decorate --oneline --graph
+
+Sekedar melihat berkas yang berubah:
+git log --name-status
+
+sekian banyak parameter yang bisa kamu gunakan
+git log --help
+
+untuk membuat repositori git baru.
+git init
+
+riwayat repositori menggunakan
+git log
+
+git clone /jalur/ke/repositori
+git clone namapengguna@host:/jalur/ke/repositori
+
+penambahan ke Indeks
+git add <namaberkas>
+git add *
+
+Untuk komit sepenuhnya gunakan
+git commit -m "Pesan komit"
+
+Untuk mengirimkannya ke repositori jarak-jauh
+git push origin master
+git push
+
+dihubungkan ke server jarak-jauh, kamu perlu menambahkan
+git remote add origin <server>
+
+GUI git bawaan
+gitk
+
+menggunakan output git penuh warna
+git config color.ui true
+
+menunjukkan log satu baris per komit
+git config format.pretty oneline
+
+menggunakan penambahan interaktif
+git add -i
