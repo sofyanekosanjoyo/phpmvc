@@ -34,7 +34,7 @@ class Mahasiswa_model
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('nip', $data['nip']);
         $this->db->bind('email', $data['email']);
-        $this->db->bind('jurusan', $data['jurusan']);
+        $this->db->bind('id', $data['id']);
 
         $this->db->execute();
 
@@ -46,6 +46,27 @@ class Mahasiswa_model
         $query = "  DELETE FROM mahasiswa WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('id', $id);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
+    public function ubahDataMahasiswa($data)
+    {
+        $query = "  UPDATE mahasiswa SET
+                    nama = :nama, 
+                    nip = :nip, 
+                    email = :email, 
+                    jurusan = :jurusan
+                    WHERE id = :id";
+
+        $this->db->query($query);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nip', $data['nip']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('jurusan', $data['jurusan']);
+        $this->db->bind('id', $data['id']);
 
         $this->db->execute();
 

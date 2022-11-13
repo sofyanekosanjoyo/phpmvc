@@ -29,14 +29,20 @@ Untuk komit sepenuhnya gunakan
 git commit -m "Pesan komit"
 
 dihubungkan ke server jarak-jauh, kamu perlu menambahkan
-git remote add origin <server>
+git remote add origin <alamat repositori di Github>
 
 Untuk mengirimkannya ke repositori jarak-jauh
-git push origin master
+git push -u origin master
 git push
 
 GUI git bawaan
 gitk
+
+Melihat data akun Github
+git config --list
+git config --local
+git config --global user.name "sofyanekosanjoyo"
+git config --global user.name "sofyanekosanjoyo@pu.go.id"
 
 menggunakan output git penuh warna
 git config color.ui true
