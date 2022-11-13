@@ -28,12 +28,12 @@ git add *
 Untuk komit sepenuhnya gunakan
 git commit -m "Pesan komit"
 
+dihubungkan ke server jarak-jauh, kamu perlu menambahkan
+git remote add origin <server>
+
 Untuk mengirimkannya ke repositori jarak-jauh
 git push origin master
 git push
-
-dihubungkan ke server jarak-jauh, kamu perlu menambahkan
-git remote add origin <server>
 
 GUI git bawaan
 gitk
